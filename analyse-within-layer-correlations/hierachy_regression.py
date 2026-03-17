@@ -12,7 +12,9 @@ print("HIERARCHICAL PATTERN LINEAR REGRESSION ANALYSIS")
 print("="*80)
 
 # Load data
-base_path = Path('/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/results/6_cluster')
+import pathlib
+base_path = pathlib.Path(__file__).parent.parent.resolve()
+base_path = base_path / "results" /  "6_cluster"
 models = ["strings", "drum_loops", "taylor_vocal"]
 
 # Categorize datasets
@@ -258,7 +260,6 @@ for stimulus_type, title, ax in panel_configs:
 plt.tight_layout()
 
 # Save figure
-base_path = Path("/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/plots") 
 output_path = base_path / 'hierarchical_linear_regressions_2panel.png'
 plt.savefig(output_path, dpi=300, bbox_inches='tight')
 print(f"\n✓ Saved plot to {output_path}")

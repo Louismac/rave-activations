@@ -12,7 +12,9 @@ print("="*80)
 
 def load_data(i):
     print(f"loading data for cluster {i}")
-    base_path = Path(f"/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/results")
+    import pathlib
+    base_path = pathlib.Path(__file__).parent.parent.resolve()
+    base_path = base_path / "results" 
     models = ['strings', 'drum_loops', 'taylor_vocal']
     datasets = ['strings', 'drum_loops', 'vocals', 'stimuli']
     sections = ['early', 'middle', 'late']
@@ -23,7 +25,7 @@ def load_data(i):
     for model in models:
         for dataset in datasets:
             corr_file = base_path / model / dataset / 'cross_layer_cluster_correlation_all_neurons.json'
-            
+            print(corr_file)
             if corr_file.exists():
                 with open(corr_file, 'r') as f:
                     data = json.load(f)

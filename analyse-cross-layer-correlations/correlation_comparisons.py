@@ -14,6 +14,7 @@ k = range(4,11)
 k = [6]
 for i in k:
     layer_df, cluster_df = load_data(i)
+    print(layer_df, cluster_df)
     print("\n" + "="*80)
     print("3. CRITICAL COMPARISON: CLUSTER vs LAYER CORRELATIONS")
     print("="*80)
@@ -173,7 +174,10 @@ draw_bars(axes[1],
 axes[1].set_title('Model-Specific Performance', fontsize=14, fontweight='bold')
 
 plt.tight_layout()
-output_path = Path('/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/plots') / 'clustering_improvement_stratified.png'
+import pathlib
+base_path = pathlib.Path(__file__).parent.parent.resolve()
+base_path = base_path / "results" / "6_cluster"
+output_path = base_path / 'clustering_improvement_stratified.png'
 output_path.parent.mkdir(exist_ok=True, parents=True)
 plt.savefig(output_path, dpi=300, bbox_inches='tight')
 print(f"\n✓ Saved plot to {output_path}")

@@ -13,7 +13,10 @@ for i in k:
     print("="*80)
     print(f"COMPREHENSIVE CROSS-LAYER CLUSTERING ANALYSIS for k={i}")
     print("="*80)
-    base_path = Path(f"/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/results/{i}_cluster")
+    import pathlib
+    base_path = pathlib.Path(__file__).parent.parent.resolve()
+    base_path = base_path / "results" 
+    base_path = base_path / f"{i}_cluster"
     models = ['strings', 'drum_loops', 'taylor_vocal']
     datasets = ['strings', 'drum_loops', 'vocals', 'stimuli']
 
@@ -34,10 +37,10 @@ for i in k:
         for dataset in datasets:
             # Cross-layer
             cross_file = base_path / model / dataset / 'cross_layer_clustering_results_all_neurons.json'
+            print(cross_file)
             if cross_file.exists():
                 with open(cross_file, 'r') as f:
                     cross_data = json.load(f)
-                
                 for section in ['early', 'middle', 'late']:
                     if section in cross_data:
                         cross_layer_scores.append({

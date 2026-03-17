@@ -4,8 +4,9 @@ import numpy as np
 from pathlib import Path
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-base_path = Path('/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/results/6_cluster')
+import pathlib
+base_path = pathlib.Path(__file__).parent.parent.resolve()
+base_path = base_path / "results" /  "6_cluster"
 models = ['strings', 'drum_loops', 'taylor_vocal']
 datasets = ['strings', 'drum_loops', 'vocals', 'stimuli']
 

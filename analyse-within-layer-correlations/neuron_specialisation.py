@@ -21,7 +21,9 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-base_path = Path('/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/results/6_cluster')
+import pathlib
+base_path = pathlib.Path(__file__).parent.resolve()
+base_path = base_path / "results/6_cluster'"
 models   = ['strings', 'drum_loops', 'taylor_vocal']
 datasets = ['strings', 'drum_loops', 'vocals', 'stimuli']
 

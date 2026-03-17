@@ -142,7 +142,10 @@ ax.grid(True, alpha=0.2, linestyle='--')
 plt.tight_layout()
 
 # Save figure
-output_path = Path('/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/plots') / 'top_clusters_spatial.png'
+import pathlib
+base_path = pathlib.Path(__file__).parent.parent.resolve()
+base_path = base_path / "results" / "6_cluster"
+output_path = base_path / 'top_clusters_spatial.png'
 output_path.parent.mkdir(exist_ok=True, parents=True)
 plt.savefig(output_path, dpi=300, bbox_inches='tight')
 print(f"\n✓ Saved plot to {output_path}")

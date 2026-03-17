@@ -238,7 +238,7 @@ class RAVEActivationAnalyser:
                 self.hooks[name] = hook
                 self.hook_handles.append(handle)
                 registered += 1
-                print(f"  ✓ Registered hook on: {name} ({type(module).__name__})")
+                # print(f"  ✓ Registered hook on: {name} ({type(module).__name__})")
         
         print(f"\nSummary: Registered {registered} hooks out of {candidates} candidate layers")
         if registered == 0:
@@ -383,8 +383,6 @@ class RAVEActivationAnalyser:
                     output = self.model.decode(z)
                 else:
                     output = self.model(batch_tensor)
-
-                print(" ✓")
 
             # Activations are now stored in hooks
         
@@ -699,24 +697,10 @@ class RAVEActivationAnalyser:
 
             for layer_name in layer_names:
                 activations = self.activation_records[layer_name].activations.T
-                n_neurons = activations.shape[0]
-
-                # Calculate variance for each neuron across samples
                 neuron_variances = np.var(activations, axis=1)
-
-                # Sort by variance and keep top neurons
                 sorted_indices = np.argsort(neuron_variances)[::-1]
-                cumsum = np.cumsum(neuron_variances[sorted_indices])
-                total_var = cumsum[-1]
-                threshold_idx = np.searchsorted(cumsum, variance_threshold * total_var)
-
-                # Keep at least some neurons from each layer
-                n_keep = max(threshold_idx + 1, min(10, n_neurons))
+                #keep all
                 top_indices = sorted_indices
-
-                # print(f"  {layer_name}: keeping {n_keep}/{n_neurons} neurons ({n_keep/n_neurons*100:.1f}%)")
-
-                # Add selected neurons
                 all_activations.append(activations[top_indices])
                 # Store both layer name and original neuron index
                 neuron_layer_map.extend([(layer_name, int(idx)) for idx in top_indices])

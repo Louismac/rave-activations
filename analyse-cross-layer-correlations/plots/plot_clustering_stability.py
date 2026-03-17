@@ -16,8 +16,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import adjusted_rand_score
 
-base_path = Path("/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/results")
-
+import pathlib
+base_path = pathlib.Path(__file__).parent.resolve()
+base_path = base_path / "results/6_cluster'"
 MODELS   = ['drum_loops', 'strings', 'taylor_vocal']
 DATASETS = ['drum_loops', 'stimuli', 'strings', 'vocals']
 SECTIONS = ['early', 'middle', 'late']

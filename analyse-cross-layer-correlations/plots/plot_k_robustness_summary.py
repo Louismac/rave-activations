@@ -8,7 +8,9 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 from util import load_data
 
-base_path = Path("/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/results")
+import pathlib
+base_path = pathlib.Path(__file__).parent.parent.resolve()
+base_path = base_path / "results" / "6_cluster"
 models   = ['strings', 'drum_loops', 'taylor_vocal']
 datasets = ['strings', 'drum_loops', 'vocals', 'stimuli']
 sections = ['early', 'middle', 'late']

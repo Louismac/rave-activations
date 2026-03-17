@@ -11,8 +11,9 @@ Exclusions: drum_loops dataset from pitch; vocals dataset from BPM.
 import json
 import numpy as np
 from pathlib import Path
-
-base_path = Path('/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/results/6_cluster')
+import pathlib
+base_path = pathlib.Path(__file__).parent.parent.resolve()
+base_path = base_path / "results" /  "6_cluster"
 models   = ['strings', 'drum_loops', 'taylor_vocal']
 datasets = ['strings', 'drum_loops', 'vocals', 'stimuli']
 

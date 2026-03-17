@@ -12,12 +12,12 @@ from pathlib import Path
 
 # reuse helpers from analyse.py
 sys.path.insert(0, str(Path(__file__).parent))
-import analyse as _analyse
+import rave_activation_clustering as _analyse
 
-home = Path("/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/")
+home = Path(__file__).parent / "results" 
 _analyse.home = home   # load_datasets() uses the module-level home variable
 
-from analyse import get_analyser, load_datasets, convert_channels
+from rave_activation_clustering import get_analyser, load_datasets, convert_channels
 models      = ["strings", "drum_loops", "taylor_vocal"]
 n_clusters  = 6        # must match the results folder you want to populate
 device      = "cuda"

@@ -180,10 +180,10 @@ def create_summary_table(variance_data, clustering_data, output_dir):
     df['sort_key'] = layer_nums
     df = df.sort_values('sort_key').drop('sort_key', axis=1)
     
-    print("\n" + "="*80)
-    print("Table 1: Layer-Level Statistics")
-    print("="*80)
-    print(df.to_string(index=False))
+    # print("\n" + "="*80)
+    # print("Table 1: Layer-Level Statistics")
+    # print("="*80)
+    # print(df.to_string(index=False))
     
     # Save to CSV
     output_dir = output_dir / 'table1_layer_statistics.csv'
@@ -207,113 +207,26 @@ def load_datasets(home):
     print("\n1. Loading strings dataset...")
     strings_cache = cache_dir / "strings_dataset.pkl"
     strings_audio, strings_metadata = load_dataset_cache(strings_cache)
-
-    if strings_audio is None:
-        print("   Cache not found, creating dataset...")
-        strings_audio, strings_metadata = AudioDataset.select_strings(
-            "/home/louis/Documents/datasets/string_loops", 100, channels=2)
-        print(f"   Loaded {len(strings_audio)} strings samples")
-
-        # Apply pitch segment extraction to strings
-        print("   Extracting pitched segments from strings...")
-        strings_audio, strings_metadata = AudioDataset.extract_pitched_segments(
-            strings_audio, strings_metadata,
-            segment_duration=0.1,
-            sample_rate=48000,
-            fmin=80.0,
-            fmax=800.0
-        )
-        print(strings_metadata)
-        print(f"   Total: {len(strings_audio)} samples (original + pitched segments)")
-
-        # Save to cache
-        save_dataset_cache(strings_cache, strings_audio, strings_metadata)
-    else:
-        print(f"   Loaded {len(strings_audio)} samples from cache")
+    print(f"   Loaded {len(strings_audio)} samples from cache")
 
     # Drums dataset
     print("\n2. Loading drums dataset...")
     drums_cache = cache_dir / "drums_dataset.pkl"
     drums_audio, drums_metadata = load_dataset_cache(drums_cache)
-
-    if drums_audio is None:
-        print("   Cache not found, creating dataset...")
-        drums_audio, drums_metadata = AudioDataset.select_drums(
-            "/home/louis/Documents/datasets/drum_loops", 100, channels=2)
-        print(f"   Loaded {len(drums_audio)} drum samples")
-
-        # Apply pitch segment extraction to drums
-        print("   Extracting pitched segments from drums...")
-        drums_audio, drums_metadata = AudioDataset.extract_pitched_segments(
-            drums_audio, drums_metadata,
-            segment_duration=0.1,
-            sample_rate=48000,
-            fmin=80.0,
-            fmax=800.0
-        )
-        print(drums_metadata)
-        print(f"   Total: {len(drums_audio)} samples (original + pitched segments)")
-
-        # Save to cache
-        save_dataset_cache(drums_cache, drums_audio, drums_metadata)
-    else:
-        print(f"   Loaded {len(drums_audio)} samples from cache")
+    print(f"   Loaded {len(drums_audio)} samples from cache")
 
     # Stimuli dataset
     print("\n3. Generating stimuli dataset...")
     stimuli_cache = cache_dir / "stimuli_dataset.pkl"
     stimuli_audio, stimuli_metadata = load_dataset_cache(stimuli_cache)
-
-    if stimuli_audio is None:
-        print("   Cache not found, creating dataset...")
-        stimuli_audio, stimuli_metadata = AudioDataset.generate_test_dataset(channels=2)
-        print(f"   Generated {len(stimuli_audio)} stimuli samples")
-
-        # Apply pitch segment extraction to stimuli
-        print("   Extracting pitched segments from stimuli...")
-        stimuli_audio, stimuli_metadata = AudioDataset.extract_pitched_segments(
-            stimuli_audio, stimuli_metadata,
-            segment_duration=0.1,
-            sample_rate=48000,
-            fmin=80.0,
-            fmax=800.0
-        )
-        print(stimuli_metadata)
-        print(f"   Total: {len(stimuli_audio)} samples (original + pitched segments)")
-
-        # Save to cache
-        save_dataset_cache(stimuli_cache, stimuli_audio, stimuli_metadata)
-    else:
-        print(f"   Loaded {len(stimuli_audio)} samples from cache")
+    print(f"   Loaded {len(stimuli_audio)} samples from cache")
 
     # Vocals dataset
     print("\n4. Loading vocals dataset...")
     vocals_cache = cache_dir / "vocals_dataset.pkl"
     vocals_audio, vocals_metadata = load_dataset_cache(vocals_cache)
 
-    if vocals_audio is None:
-        print("   Cache not found, creating dataset...")
-        vocals_audio, vocals_metadata = AudioDataset.select_vocals_from_csv(
-            "/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/taylor_extras/dataset_analysis",
-            100, channels=2)
-        print(f"   Loaded {len(vocals_audio)} vocal samples")
-
-        # Apply pitch segment extraction to vocals
-        print("   Extracting pitched segments from vocals...")
-        vocals_audio, vocals_metadata = AudioDataset.extract_pitched_segments(
-            vocals_audio, vocals_metadata,
-            segment_duration=0.1,
-            sample_rate=48000,
-            fmin=80.0,
-            fmax=800.0
-        )
-        print(vocals_metadata)
-        print(f"   Total: {len(vocals_audio)} samples (original + pitched segments)")
-
-        # Save to cache
-        save_dataset_cache(vocals_cache, vocals_audio, vocals_metadata)
-    else:
-        print(f"   Loaded {len(vocals_audio)} samples from cache")
+    print(f"   Loaded {len(vocals_audio)} samples from cache")
 
     print("\n" + "="*70)
     print("Datasets ready!")
@@ -343,7 +256,7 @@ def run_cluster_analysis(home, datasets_dict, n_clusters = 6):
         analyser = get_analyser(
             model_path=model_path,
             config_path=config_path,
-            device="cuda"
+            device="mps"
         )
         run_analysis(analyser, datasets_dict["strings"][0], datasets_dict["strings"][1], output_dir / "strings", n_clusters, pca_components)
 
@@ -352,7 +265,7 @@ def run_cluster_analysis(home, datasets_dict, n_clusters = 6):
         analyser = get_analyser(
             model_path=model_path,
             config_path=config_path,
-            device="cuda"
+            device="mps"
         )
         run_analysis(analyser, datasets_dict["drum_loops"][0], datasets_dict["drum_loops"][1], output_dir / "drum_loops", n_clusters, pca_components)
 
@@ -361,7 +274,7 @@ def run_cluster_analysis(home, datasets_dict, n_clusters = 6):
         analyser = get_analyser(
             model_path=model_path,
             config_path=config_path,
-            device="cuda"
+            device="mps"
         )
         run_analysis(analyser, datasets_dict["stimuli"][0], datasets_dict["stimuli"][1], output_dir / "stimuli", n_clusters, pca_components)
 
@@ -370,7 +283,7 @@ def run_cluster_analysis(home, datasets_dict, n_clusters = 6):
         analyser = get_analyser(
             model_path=model_path,
             config_path=config_path,
-            device="cuda"
+            device="mps"
         )
         run_analysis(analyser, datasets_dict["vocals"][0], datasets_dict["vocals"][1], output_dir / "vocals", n_clusters, pca_components)
 
@@ -379,7 +292,8 @@ if __name__ == "__main__":
     """
     Main execution block for running experiments
     """
-    home = Path("/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/")
+    import pathlib
+    home = pathlib.Path(__file__).parent.resolve()
     models = ["strings", "drum_loops", "taylor_vocal"]
     datasets = load_datasets(home)
     pca_components = 2

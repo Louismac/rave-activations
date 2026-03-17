@@ -18,8 +18,9 @@ print("STATISTICAL TESTS: SYNTHETIC vs NATURAL AUDIO")
 print("Metrics: mean |r|  AND  % neurons above null p95")
 print("="*80)
 
-results_path = Path('/home/louis/Documents/notebooks/rave-activations/RAVE-activations-2025/results/6_cluster')
-
+import pathlib
+results_path = pathlib.Path(__file__).parent.parent.resolve()
+results_path = results_path / "results" /  "6_cluster"
 models            = ["strings", "drum_loops", "taylor_vocal"]
 natural_datasets  = ["strings", "vocals", "drum_loops"]
 synthetic_datasets = ["stimuli"]
