@@ -152,15 +152,6 @@ for prop, sub_df in [('pitch', pitch_df), ('bpm', bpm_df)]:
         pct = sub_df[sub_df['section'] == section]['pct_above_p95'].mean()
         print(f"  {section:<10s} {pct:>22.1f}%")
 
-# ── section 3: wilcoxon — neuron-level pitch vs BPM ──────────────────────────
-# Pair pitch and BPM correlations for the same neuron in the same layer.
-# Only combos where both features are valid (excludes drum_loops and vocals).
-
-print("\n" + "="*80)
-print("WILCOXON SIGNED-RANK: PITCH vs BPM (neuron-level pairs)")
-print("="*80)
-print("Each pair: (pitch |r|, bpm |r|) for the same neuron in the same layer.")
-print("Excludes drum_loops (no pitch) and vocals (BPM at chance).\n")
 
 def neuron_specialisation(subset_df, label):
     """
@@ -176,7 +167,7 @@ def neuron_specialisation(subset_df, label):
     categories = {'pitch_only': 0, 'bpm_only': 0, 'dual': 0, 'neither': 0}
 
     for (model, dataset, layer), grp in subset_df.groupby(['model', 'dataset', 'layer']):
-        if dataset in ('drum_loops', 'vocals'):
+        if dataset == 'drum_loops':
             continue
         p_rows = grp[grp['property'] == 'pitch']
         b_rows = grp[grp['property'] == 'bpm']
@@ -226,7 +217,7 @@ for model in models:
     neuron_specialisation(df[df['model'] == model], f"  {model}")
 
 print("BY DATASET:")
-for dataset in ['strings', 'stimuli']:
+for dataset in ['strings', 'vocals', 'stimuli']:
     neuron_specialisation(df[df['dataset'] == dataset], f"  {dataset}")
 
 # ── section 4: model × dataset summary table ─────────────────────────────────

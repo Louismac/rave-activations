@@ -22,7 +22,7 @@ def load_data(i):
 
     for model in models:
         for dataset in datasets:
-            corr_file = base_path / model / dataset / 'cross_layer_cluster_correlation.json'
+            corr_file = base_path / model / dataset / 'cross_layer_cluster_correlation_all_neurons.json'
             
             if corr_file.exists():
                 with open(corr_file, 'r') as f:

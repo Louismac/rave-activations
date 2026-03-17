@@ -7,7 +7,9 @@ from scipy import stats
 print("="*80)
 print("COMPREHENSIVE CROSS-LAYER CLUSTERING ANALYSIS")
 print("="*80)
-for i in range (4,11):
+k = range (4,11)
+k = [6]
+for i in k:
     print("="*80)
     print(f"COMPREHENSIVE CROSS-LAYER CLUSTERING ANALYSIS for k={i}")
     print("="*80)
@@ -31,7 +33,7 @@ for i in range (4,11):
     for model in models:
         for dataset in datasets:
             # Cross-layer
-            cross_file = base_path / model / dataset / 'cross_layer_clustering_results.json'
+            cross_file = base_path / model / dataset / 'cross_layer_clustering_results_all_neurons.json'
             if cross_file.exists():
                 with open(cross_file, 'r') as f:
                     cross_data = json.load(f)
@@ -47,12 +49,6 @@ for i in range (4,11):
                             'n_neurons': cross_data[section]['n_neurons'],
                             'n_samples': len(cross_data[section]['cluster_labels'])
                         })
-            
-            # Within-layer (original)
-            orig_file = orig_path / model / dataset / 'table1_layer_statistics.csv'
-            if orig_file.exists():
-                stats_df = pd.read_csv(orig_file).dropna()
-                within_layer_scores.extend(stats_df['Silhouette'].values)
 
     cross_df = pd.DataFrame(cross_layer_scores)
     within_array = np.array(within_layer_scores)
@@ -60,33 +56,18 @@ for i in range (4,11):
     # print(f"\nCROSS-LAYER (sectioned):") 
     print(f"  Mean silhouette: {cross_df['silhouette'].mean():.3f} ± {cross_df['silhouette'].std():.3f}")
     print(f"  Range: {cross_df['silhouette'].min():.3f} to {cross_df['silhouette'].max():.3f}")
-    # print(f"  Sections analyzed: {len(cross_df)}")
+    print(f"  Sections analyzed: {len(cross_df)}")
 
-    # print(f"\nWITHIN-LAYER (original):")
-    # print(f"  Mean silhouette: {within_array.mean():.3f} ± {within_array.std():.3f}")
-    # print(f"  Range: {within_array.min():.3f} to {within_array.max():.3f}")
-    # print(f"  Layers analyzed: {len(within_array)}")
+    print("\n" + "="*80)
+    print("2. HIERARCHICAL SECTION COMPARISON")
+    print("="*80)
 
-    # # Statistical test
-    # t_stat, p_val = stats.ttest_ind(cross_df['silhouette'], within_array)
-    # improvement = ((cross_df['silhouette'].mean() - within_array.mean()) / within_array.mean()) * 100
-
-    # print(f"\n📊 STATISTICAL COMPARISON:")
-    # print(f"  Cross-layer improvement: {improvement:+.1f}%")
-    # print(f"  t-test: t={t_stat:.2f}, p={p_val:.4f}")
-    # if p_val < 0.001:
-    #     print(f"  *** HIGHLY SIGNIFICANT improvement (p<0.001)")
-    # elif p_val < 0.05:
-    #     print(f"  ** Significant improvement (p<0.05)")
-    # else:
-    #     print(f"  No significant difference")
-
-    # Quality distribution
-    cross_good = (cross_df['silhouette'] > 0.5).sum()
-    within_good = (within_array > 0.5).sum()
-
-    # print(f"\nGOOD CLUSTERING (silhouette > 0.5):")
-    # print(f"  Cross-layer: {cross_good}/{len(cross_df)} ({100*cross_good/len(cross_df):.1f}%)")
-    # print(f"  Within-layer: {within_good}/{len(within_array)} ({100*within_good/len(within_array):.1f}%)")
-    # print(f"  Improvement: {100*(cross_good/len(cross_df) - within_good/len(within_array)):.1f} percentage points")
+    for section in ['early', 'middle', 'late']:
+        section_df = cross_df[cross_df['section'] == section]
+        print(f"\n{section.upper()} SECTION (layers 0-7 / 8-14 / 15+):")
+        print(f"  Mean silhouette: {section_df['silhouette'].mean():.3f} ± {section_df['silhouette'].std():.3f}")
+        print(f"  Best: {section_df['silhouette'].max():.3f} ({section_df.loc[section_df['silhouette'].idxmax(), 'model']} + {section_df.loc[section_df['silhouette'].idxmax(), 'dataset']})")
+        print(f"  Good clustering (>0.5): {(section_df['silhouette'] > 0.5).sum()}/{len(section_df)} ({100*(section_df['silhouette'] > 0.5).sum()/len(section_df):.1f}%)")
+        print(f"  Mean neurons: {section_df['n_neurons'].mean():.0f}")
+        print(f"  Mean samples: {section_df['n_samples'].mean():.0f}")
 

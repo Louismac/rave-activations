@@ -358,7 +358,7 @@ class RAVEActivationAnalyser:
                 batch = [audio_inputs[idx] for idx in batch_indices]
                 batch_counter += 1
 
-                print(f"  Batch {batch_counter}/{total_batches} (length={length}, {len(batch)} samples)...", end='')
+                # print(f"  Batch {batch_counter}/{total_batches} (length={length}, {len(batch)} samples)...", end='')
 
                 # Ensure each audio has correct shape (add channel dimension if needed)
                 processed_batch = []
@@ -388,13 +388,13 @@ class RAVEActivationAnalyser:
 
             # Activations are now stored in hooks
         
-        print("\n" + "-"*60)
-        print("DEBUG: Checking hook state after forward passes")
-        print(f"  Number of hooks in self.hooks: {len(self.hooks)}")
-        print(f"  Hook names: {list(self.hooks.keys())[:3]}...")
-        for name, hook in list(self.hooks.items())[:2]:
-            print(f"  Hook '{name}' has {len(hook.activations)} activation batches")
-        print("-"*60)
+        # print("\n" + "-"*60)
+        # print("DEBUG: Checking hook state after forward passes")
+        # print(f"  Number of hooks in self.hooks: {len(self.hooks)}")
+        # print(f"  Hook names: {list(self.hooks.keys())[:3]}...")
+        # for name, hook in list(self.hooks.items())[:2]:
+        #     print(f"  Hook '{name}' has {len(hook.activations)} activation batches")
+        # print("-"*60)
         
         print("\nConverting activations to records...")
         # Convert activations to ActivationRecords
@@ -712,9 +712,9 @@ class RAVEActivationAnalyser:
 
                 # Keep at least some neurons from each layer
                 n_keep = max(threshold_idx + 1, min(10, n_neurons))
-                top_indices = sorted_indices[:n_keep]
+                top_indices = sorted_indices
 
-                print(f"  {layer_name}: keeping {n_keep}/{n_neurons} neurons ({n_keep/n_neurons*100:.1f}%)")
+                # print(f"  {layer_name}: keeping {n_keep}/{n_neurons} neurons ({n_keep/n_neurons*100:.1f}%)")
 
                 # Add selected neurons
                 all_activations.append(activations[top_indices])
@@ -776,7 +776,7 @@ class RAVEActivationAnalyser:
             # Note: cluster_result is already stored in self.cluster_results[temp_layer_name]
 
         # Save results
-        results_path = output_dir / "cross_layer_clustering_results.json"
+        results_path = output_dir / "cross_layer_clustering_results_all_neurons.json"
         with open(results_path, 'w') as f:
             json.dump(results_summary, f, indent=2)
         print(f"\n✓ Saved cross-layer clustering results to {results_path}")
@@ -797,7 +797,7 @@ class RAVEActivationAnalyser:
 
         # Load cross-layer clustering results to get neuron_layer_map and cluster_labels
         output_dir = Path(output_dir)
-        clustering_results_path = output_dir / "cross_layer_clustering_results.json"
+        clustering_results_path = output_dir / "cross_layer_clustering_results_all_neurons.json"
 
         if not clustering_results_path.exists():
             raise FileNotFoundError(f"Cross-layer clustering results not found at {clustering_results_path}. "
@@ -895,7 +895,7 @@ class RAVEActivationAnalyser:
             correlation_results[section_name] = section_correlation_results
 
         # Save correlation results
-        results_path = output_dir / "cross_layer_cluster_correlation.json"
+        results_path = output_dir / "cross_layer_cluster_correlation_all_neurons.json"
         with open(results_path, 'w') as f:
             json.dump(correlation_results, f, indent=2)
 

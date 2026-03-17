@@ -37,7 +37,7 @@ for model in models:
 rows = []
 for model in models:
     for dataset in datasets:
-        corr_file = base_path / model / dataset / 'cross_layer_cluster_correlation.json'
+        corr_file = base_path / model / dataset / 'cross_layer_cluster_correlation_all_neurons.json'
         if not corr_file.exists():
             continue
         with open(corr_file) as f:

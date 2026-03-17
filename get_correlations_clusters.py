@@ -3,6 +3,8 @@ from pathlib import Path
 import gin
 import pickle
 from rave import RAVE
+import json
+import pandas as pd
 
 from rave_activation_clustering import (
     RAVEActivationAnalyser

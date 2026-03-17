@@ -2,7 +2,9 @@ from util import load_data
 bpm_best = []
 pitch_best = []
 sections = ['early', 'middle', 'late']
-for i in range (4,11):
+k = range (4,11)
+k = [6]
+for i in k:
     layer_df, cluster_df = load_data(i)
     # For pitched datasets only
     pitched_cluster = cluster_df[cluster_df['dataset'] != 'drum_loops']
