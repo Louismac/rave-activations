@@ -2,9 +2,9 @@ This repository contains code for reproducing analysis in the submitted paper ``
 
 1. Get Data 
 
-You will need to get the trained models and datasets from 
+You will need to request access to get the trained models and datasets from 
 
-```URL```
+[HERE](https://drive.google.com/drive/folders/1UCSV50c-Z2EiYY-j5_Ir06yHNZk1D8lU?usp=sharing)
 
 This will be 3 `.ckpt` and `.gin` combinations for the models and 4 `.pkl` files for the datasets 
 
