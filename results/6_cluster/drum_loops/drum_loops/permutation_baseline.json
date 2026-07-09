@@ -1,0 +1,44 @@
+{
+  "bpm": {
+    "n_permutations": 500,
+    "n_neuron_layer_pairs": 10112,
+    "threshold": 0.15,
+    "null_mean_r": 0.036251550625780594,
+    "null_std_r": 0.010353517861858584,
+    "null_p95_r": 0.08818849012293725,
+    "null_pct_exceeding": 0.04309731012658228,
+    "null_pct_exceeding_std": 0.17526731834035586,
+    "observed_mean_r": 0.17153236949393935,
+    "observed_max_r": 0.5772944626853582,
+    "observed_pct_exceeding": 55.11273734177215,
+    "observed_pct_exceeding_p95": 74.02096518987342
+  },
+  "spectral_centroid": {
+    "n_permutations": 500,
+    "n_neuron_layer_pairs": 10112,
+    "threshold": 0.15,
+    "null_mean_r": 0.03640865929292464,
+    "null_std_r": 0.011530694457991373,
+    "null_p95_r": 0.09000842883371532,
+    "null_pct_exceeding": 0.15021756329113925,
+    "null_pct_exceeding_std": 1.0983933576688458,
+    "observed_mean_r": 0.23114992211017815,
+    "observed_max_r": 0.8158397753591015,
+    "observed_pct_exceeding": 61.11550632911392,
+    "observed_pct_exceeding_p95": 76.52294303797468
+  },
+  "spectral_bandwidth": {
+    "n_permutations": 500,
+    "n_neuron_layer_pairs": 10112,
+    "threshold": 0.15,
+    "null_mean_r": 0.03541861995962502,
+    "null_std_r": 0.00989692835538244,
+    "null_p95_r": 0.08615948543794173,
+    "null_pct_exceeding": 0.06698971518987341,
+    "null_pct_exceeding_std": 0.40163649176445515,
+    "observed_mean_r": 0.25196276271394047,
+    "observed_max_r": 0.830189624758499,
+    "observed_pct_exceeding": 66.26780063291139,
+    "observed_pct_exceeding_p95": 80.65664556962025
+  }
+}

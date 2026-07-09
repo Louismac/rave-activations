@@ -1,0 +1,58 @@
+{
+  "pitch": {
+    "n_permutations": 500,
+    "n_neuron_layer_pairs": 10112,
+    "threshold": 0.15,
+    "null_mean_r": 0.03534657669302857,
+    "null_std_r": 0.011260361734552306,
+    "null_p95_r": 0.0866059237065548,
+    "null_pct_exceeding": 0.06687104430379748,
+    "null_pct_exceeding_std": 0.44946585655399257,
+    "observed_mean_r": 0.2705143910953476,
+    "observed_max_r": 0.7199065162100545,
+    "observed_pct_exceeding": 72.73536392405063,
+    "observed_pct_exceeding_p95": 84.16732594936708
+  },
+  "bpm": {
+    "n_permutations": 500,
+    "n_neuron_layer_pairs": 10112,
+    "threshold": 0.15,
+    "null_mean_r": 0.03543778803179781,
+    "null_std_r": 0.012757443479113749,
+    "null_p95_r": 0.08703420545770624,
+    "null_pct_exceeding": 0.06948180379746836,
+    "null_pct_exceeding_std": 0.5757017197984843,
+    "observed_mean_r": 0.1765206294326887,
+    "observed_max_r": 0.6288059173177217,
+    "observed_pct_exceeding": 50.45490506329114,
+    "observed_pct_exceeding_p95": 69.89715189873418
+  },
+  "spectral_centroid": {
+    "n_permutations": 500,
+    "n_neuron_layer_pairs": 10112,
+    "threshold": 0.15,
+    "null_mean_r": 0.03585194269508912,
+    "null_std_r": 0.013135852039433458,
+    "null_p95_r": 0.08800434668408016,
+    "null_pct_exceeding": 0.06137262658227848,
+    "null_pct_exceeding_std": 0.3297885364309852,
+    "observed_mean_r": 0.4680399350744835,
+    "observed_max_r": 0.896824022320089,
+    "observed_pct_exceeding": 87.29232594936708,
+    "observed_pct_exceeding_p95": 92.69185126582279
+  },
+  "spectral_bandwidth": {
+    "n_permutations": 500,
+    "n_neuron_layer_pairs": 10112,
+    "threshold": 0.15,
+    "null_mean_r": 0.036396864591939,
+    "null_std_r": 0.013149029583687818,
+    "null_p95_r": 0.08862475614481934,
+    "null_pct_exceeding": 0.1678599683544304,
+    "null_pct_exceeding_std": 2.2064598377932514,
+    "observed_mean_r": 0.2677324819510644,
+    "observed_max_r": 0.7506476043810099,
+    "observed_pct_exceeding": 74.78243670886076,
+    "observed_pct_exceeding_p95": 85.60126582278481
+  }
+}

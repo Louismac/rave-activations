@@ -1,0 +1,30 @@
+{
+  "pitch": {
+    "n_permutations": 500,
+    "n_neuron_layer_pairs": 10112,
+    "threshold": 0.15,
+    "null_mean_r": 0.035913756801055775,
+    "null_std_r": 0.009468399117291918,
+    "null_p95_r": 0.08814372217488865,
+    "null_pct_exceeding": 0.055003955696202526,
+    "null_pct_exceeding_std": 0.17849521801321222,
+    "observed_mean_r": 0.4273563107965358,
+    "observed_max_r": 0.9796152784611137,
+    "observed_pct_exceeding": 81.77412974683544,
+    "observed_pct_exceeding_p95": 88.86471518987342
+  },
+  "bpm": {
+    "n_permutations": 500,
+    "n_neuron_layer_pairs": 10112,
+    "threshold": 0.15,
+    "null_mean_r": 0.037661333008825994,
+    "null_std_r": 0.025631532614534703,
+    "null_p95_r": 0.09209153636614546,
+    "null_pct_exceeding": 0.0033425632911392405,
+    "null_pct_exceeding_std": 0.017578819736711663,
+    "observed_mean_r": 0.9469666641281845,
+    "observed_max_r": 0.9978108072432288,
+    "observed_pct_exceeding": 99.27808544303798,
+    "observed_pct_exceeding_p95": 99.57476265822784
+  }
+}

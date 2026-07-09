@@ -1,0 +1,548 @@
+{
+  "early": {
+    "cluster_0": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 210,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.4826387136405688,
+        "observed_max_r": 0.9234297097188386,
+        "observed_pct_exceeding": 86.19047619047619,
+        "observed_pct_exceeding_p95": 91.9047619047619
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 210,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.361591121564063,
+        "observed_max_r": 0.9696406465625862,
+        "observed_pct_exceeding": 72.38095238095238,
+        "observed_pct_exceeding_p95": 89.52380952380953
+      }
+    },
+    "cluster_1": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 1313,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.4965821157220696,
+        "observed_max_r": 0.9577077028308113,
+        "observed_pct_exceeding": 84.15841584158416,
+        "observed_pct_exceeding_p95": 92.15536938309215
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 1313,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.43438681551379854,
+        "observed_max_r": 0.9787078828315312,
+        "observed_pct_exceeding": 76.92307692307693,
+        "observed_pct_exceeding_p95": 90.93678598629094
+      }
+    },
+    "cluster_2": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 195,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.5323601760667213,
+        "observed_max_r": 0.8856536546146184,
+        "observed_pct_exceeding": 87.6923076923077,
+        "observed_pct_exceeding_p95": 93.84615384615384
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 195,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.21033209286897203,
+        "observed_max_r": 0.7302010008040031,
+        "observed_pct_exceeding": 78.46153846153847,
+        "observed_pct_exceeding_p95": 91.28205128205128
+      }
+    },
+    "cluster_3": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 457,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.4719008007282179,
+        "observed_max_r": 0.9083496813987255,
+        "observed_pct_exceeding": 83.58862144420132,
+        "observed_pct_exceeding_p95": 89.93435448577681
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 457,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.26521562530029313,
+        "observed_max_r": 0.8509058356233425,
+        "observed_pct_exceeding": 69.14660831509846,
+        "observed_pct_exceeding_p95": 86.65207877461707
+      }
+    },
+    "cluster_4": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 3755,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.529396683484058,
+        "observed_max_r": 0.9692019248076993,
+        "observed_pct_exceeding": 85.85885486018641,
+        "observed_pct_exceeding_p95": 91.95739014647137
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 3755,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.5122747285964059,
+        "observed_max_r": 0.9952343489373957,
+        "observed_pct_exceeding": 82.76964047936085,
+        "observed_pct_exceeding_p95": 90.94540612516646
+      }
+    },
+    "cluster_5": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 598,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.4922908409775214,
+        "observed_max_r": 0.9423205692822771,
+        "observed_pct_exceeding": 84.94983277591973,
+        "observed_pct_exceeding_p95": 92.80936454849498
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 598,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.26792457643150314,
+        "observed_max_r": 0.9384443617774472,
+        "observed_pct_exceeding": 67.3913043478261,
+        "observed_pct_exceeding_p95": 88.46153846153845
+      }
+    }
+  },
+  "middle": {
+    "cluster_0": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 285,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.4989229869934984,
+        "observed_max_r": 0.926562298249193,
+        "observed_pct_exceeding": 84.91228070175438,
+        "observed_pct_exceeding_p95": 91.9298245614035
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 285,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.6728073919321079,
+        "observed_max_r": 0.977064836259345,
+        "observed_pct_exceeding": 92.98245614035088,
+        "observed_pct_exceeding_p95": 94.73684210526315
+      }
+    },
+    "cluster_1": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 1394,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.49272094876811523,
+        "observed_max_r": 0.9560264481057924,
+        "observed_pct_exceeding": 85.1506456241033,
+        "observed_pct_exceeding_p95": 91.10473457675752
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 1394,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.6652522294777906,
+        "observed_max_r": 0.9739534638138552,
+        "observed_pct_exceeding": 91.53515064562411,
+        "observed_pct_exceeding_p95": 95.40889526542324
+      }
+    },
+    "cluster_2": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 296,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.48936417590442516,
+        "observed_max_r": 0.9451160044640179,
+        "observed_pct_exceeding": 83.44594594594594,
+        "observed_pct_exceeding_p95": 90.2027027027027
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 296,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.5420945668469896,
+        "observed_max_r": 0.9643775215100859,
+        "observed_pct_exceeding": 87.16216216216216,
+        "observed_pct_exceeding_p95": 93.91891891891892
+      }
+    },
+    "cluster_3": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 132,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.5938345947436522,
+        "observed_max_r": 0.9177721190884762,
+        "observed_pct_exceeding": 93.18181818181817,
+        "observed_pct_exceeding_p95": 97.72727272727273
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 132,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.6798153884144336,
+        "observed_max_r": 0.933002772011088,
+        "observed_pct_exceeding": 96.96969696969697,
+        "observed_pct_exceeding_p95": 97.72727272727273
+      }
+    },
+    "cluster_4": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 577,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.46240714130413824,
+        "observed_max_r": 0.947694190776763,
+        "observed_pct_exceeding": 83.70883882149047,
+        "observed_pct_exceeding_p95": 89.94800693240902
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 577,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.6671333266780711,
+        "observed_max_r": 0.9905502982011929,
+        "observed_pct_exceeding": 90.98786828422877,
+        "observed_pct_exceeding_p95": 94.80069324090121
+      }
+    },
+    "cluster_5": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 196,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.5136453104864287,
+        "observed_max_r": 0.9431457885831542,
+        "observed_pct_exceeding": 84.6938775510204,
+        "observed_pct_exceeding_p95": 90.3061224489796
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 196,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.6020507734340043,
+        "observed_max_r": 0.9131699566798267,
+        "observed_pct_exceeding": 97.44897959183673,
+        "observed_pct_exceeding_p95": 98.9795918367347
+      }
+    }
+  },
+  "late": {
+    "cluster_0": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 289,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.5017018754467385,
+        "observed_max_r": 0.9157462229848919,
+        "observed_pct_exceeding": 86.85121107266436,
+        "observed_pct_exceeding_p95": 93.77162629757785
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 289,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.667016596798048,
+        "observed_max_r": 0.9704271777087108,
+        "observed_pct_exceeding": 87.5432525951557,
+        "observed_pct_exceeding_p95": 92.38754325259517
+      }
+    },
+    "cluster_1": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 11,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.24216815641021558,
+        "observed_max_r": 0.3797287120283373,
+        "observed_pct_exceeding": 90.9090909090909,
+        "observed_pct_exceeding_p95": 100.0
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 11,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.865646456507351,
+        "observed_max_r": 0.8889575078300314,
+        "observed_pct_exceeding": 100.0,
+        "observed_pct_exceeding_p95": 100.0
+      }
+    },
+    "cluster_2": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 90,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.5460632677927637,
+        "observed_max_r": 0.8457980391921568,
+        "observed_pct_exceeding": 92.22222222222223,
+        "observed_pct_exceeding_p95": 94.44444444444444
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 90,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.8954326929202943,
+        "observed_max_r": 0.9730780363121451,
+        "observed_pct_exceeding": 98.88888888888889,
+        "observed_pct_exceeding_p95": 100.0
+      }
+    },
+    "cluster_3": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 3,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.3755103660414642,
+        "observed_max_r": 0.4586294505178021,
+        "observed_pct_exceeding": 100.0,
+        "observed_pct_exceeding_p95": 100.0
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 3,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.8858321513286053,
+        "observed_max_r": 0.8904735458941834,
+        "observed_pct_exceeding": 100.0,
+        "observed_pct_exceeding_p95": 100.0
+      }
+    },
+    "cluster_4": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 2,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.3289813639254556,
+        "observed_max_r": 0.5367162588650354,
+        "observed_pct_exceeding": 50.0,
+        "observed_pct_exceeding_p95": 100.0
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 2,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.5390213720854884,
+        "observed_max_r": 0.8720124800499203,
+        "observed_pct_exceeding": 100.0,
+        "observed_pct_exceeding_p95": 100.0
+      }
+    },
+    "cluster_5": {
+      "pitch": {
+        "use_global_null": true,
+        "n_neurons": 309,
+        "threshold": 0.15,
+        "null_mean_r": 0.03541709394404846,
+        "null_std_r": 0.01222431542104748,
+        "null_p95_r": 0.0858319273277093,
+        "null_pct_exceeding": 0.04452136075949367,
+        "null_pct_exceeding_std": 0.35361993660234325,
+        "observed_mean_r": 0.44024253680933123,
+        "observed_max_r": 0.9255938463753854,
+        "observed_pct_exceeding": 83.1715210355987,
+        "observed_pct_exceeding_p95": 88.3495145631068
+      },
+      "bpm": {
+        "use_global_null": true,
+        "n_neurons": 309,
+        "threshold": 0.15,
+        "null_mean_r": 0.035372911321261614,
+        "null_std_r": 0.015185473475303978,
+        "null_p95_r": 0.08659013836055343,
+        "null_pct_exceeding": 0.028342563291139242,
+        "null_pct_exceeding_std": 0.25305947046994925,
+        "observed_mean_r": 0.7598377454086435,
+        "observed_max_r": 0.9802600170400679,
+        "observed_pct_exceeding": 95.14563106796116,
+        "observed_pct_exceeding_p95": 97.41100323624595
+      }
+    }
+  }
+}
