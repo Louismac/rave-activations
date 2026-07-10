@@ -31,7 +31,7 @@ from get_correlations_clusters import get_analyser, load_balanced_datasets, conv
 from encodec_adapter import EncodecActivationAnalyser, load_encodec
 
 home        = Path(__file__).parent.parent
-models      = ["drum_loops", "strings","vocals","encodec"]
+models      = ["drum_loops", "strings","taylor_vocal","encodec"]
 n_clusters  = 6
 pca_components = 2
 device      = "cuda"
@@ -52,7 +52,7 @@ datasets_dict = load_balanced_datasets(home / "cache" / "500_pitch_100_bpm_4_sc_
 for model_name in models:
     model_path  = home / "runs" / model_name / "best.ckpt"
     config_path = home / "runs" / model_name / "config.gin"
-    output_base = home / "results_44100" / f"{n_clusters}_cluster" / model_name
+    output_base = home / "results" / f"{n_clusters}_cluster" / model_name
 
     print(f"\n{'='*70}")
     print(f"Model: {model_name}")

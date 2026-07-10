@@ -17,7 +17,7 @@ from perm_test import sign_permutation_p, icc_and_neff
 
 # ── configuration ─────────────────────────────────────────────────────────────
 
-results_path = Path(__file__).parent.parent.resolve() / "results" / "6_cluster"
+results_path = Path(__file__).parent.parent.resolve() / "results_44100" / "6_cluster"
 OUTPUT_DIR = Path(__file__).parent
 
 MODELS             = ["strings", "drum_loops", "taylor_vocal"]

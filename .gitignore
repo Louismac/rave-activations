@@ -6,7 +6,9 @@ __pycache__/
 *.png
 *.json
 *.csv
+*.out
 runs/
+dataset/
 cache/
 results/
 bending_experiments/

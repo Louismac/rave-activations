@@ -28,7 +28,7 @@ from encodec_adapter import EncodecActivationAnalyser, load_encodec
 
 
 home        = Path(__file__).parent.parent   # rave-activations/
-models      = ["drum_loops", "strings","vocals","encodec"]
+models      = ["drum_loops", "strings","taylor_vocal","encodec"]
 n_clusters  = 6        # must match the results folder you want to populate
 device      = "cuda"
 N_PERMS     = 500     # reduce to 100 for a quick sanity check
@@ -48,7 +48,7 @@ for model_name in models:
     
     model_path  = home / "runs" / model_name / "best.ckpt"
     config_path = home / "runs" / model_name / "config.gin"
-    output_base = home / "results_44100" / f"{n_clusters}_cluster" / model_name
+    output_base = home / "results" / f"{n_clusters}_cluster" / model_name
 
     print(f"\n{'='*70}")
     print(f"Model: {model_name}")

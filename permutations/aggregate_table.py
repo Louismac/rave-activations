@@ -37,7 +37,9 @@ def bootstrap_cells(values):
 
 def main():
     cell_df = build_per_cell_table()
+
     cell_df = cell_df[cell_df["model"] != "encodec"]
+    
     cell_df["stimulus"], cell_df["dist"] = zip(
         *cell_df.apply(lambda r: classify(r["model"], r["dataset"]), axis=1))
 

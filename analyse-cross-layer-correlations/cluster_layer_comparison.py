@@ -47,6 +47,8 @@ STIMULUS_TYPE = {
 
 PROPERTIES = ["pitch", "bpm", "spectral_centroid", "spectral_bandwidth"]
 
+# PROPERTIES = ["pitch", "bpm"]
+
 # Only keep rows whose "model" column contains one of these substrings
 # (case-insensitive). Set to None to keep all models, e.g. ["encodec"].
 OUTPUT_DIR = Path(__file__).parent
@@ -110,17 +112,17 @@ MEASURES = {
         "cluster_col":    "observed_pct_exceeding_p95",
         "interpretation": "per-neuron",
     },
-    "r2": {
-        "label":            "Nonlinear probe R² (joint)",
-        "ylabel":           "Observed R²",
-        "layer_csv":        PERM_DIR / "plot_obs_r2_per_layer.csv",
-        "layer_col":        "observed_r2",
-        "layer_size_col":   "n_channels",
-        "cluster_csv":      PERM_DIR / "permutation_baseline_nonlinear_clusters_table.csv",
-        "cluster_col":      "observed_r2",
-        "cluster_size_col": "n_channels",
-        "interpretation":   "joint encoding",
-    },
+    # "r2": {
+    #     "label":            "Nonlinear probe R² (joint)",
+    #     "ylabel":           "Observed R²",
+    #     "layer_csv":        PERM_DIR / "plot_obs_r2_per_layer.csv",
+    #     "layer_col":        "observed_r2",
+    #     "layer_size_col":   "n_channels",
+    #     "cluster_csv":      PERM_DIR / "permutation_baseline_nonlinear_clusters_table.csv",
+    #     "cluster_col":      "observed_r2",
+    #     "cluster_size_col": "n_channels",
+    #     "interpretation":   "joint encoding",
+    # },
 }
 
 # ── helpers ───────────────────────────────────────────────────────────────────
@@ -410,9 +412,9 @@ if __name__ == "__main__":
 
     # Pre-load layer n lookup from the r2 CSV (has n_channels per model/dataset/layer).
     # Used as fallback for measures whose own layer CSV has no size column.
-    _r2_layer_csv = MEASURES["r2"]["layer_csv"]
-    layer_n_lookup = (pd.read_csv(_r2_layer_csv)[["model", "dataset", "layer", "n_channels"]]
-                      .drop_duplicates() if _r2_layer_csv.exists() else None)
+    # _r2_layer_csv = MEASURES["r2"]["layer_csv"]
+    # layer_n_lookup = (pd.read_csv(_r2_layer_csv)[["model", "dataset", "layer", "n_channels"]]
+    #                   .drop_duplicates() if _r2_layer_csv.exists() else None)
 
     for measure_key, info in MEASURES.items():
         df = load_best_per_cell(
@@ -420,7 +422,7 @@ if __name__ == "__main__":
             info["cluster_csv"], info["cluster_col"],
             cluster_size_col=info.get("cluster_size_col", "n_neurons"),
             layer_size_col=info.get("layer_size_col", "n_channels"),
-            layer_n_lookup=layer_n_lookup,
+            layer_n_lookup=None,
             model_filter=MODEL_FILTER,
         )
         if len(df) == 0:

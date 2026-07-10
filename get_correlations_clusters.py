@@ -128,10 +128,10 @@ def load_balanced_datasets(cache_dir):
     """
     cache_dir = Path(cache_dir)
     cache_filenames = {
-        'strings':    'strings_dataset_features_balanced_44100.pkl',
-        'drum_loops': 'drums_dataset_features_balanced_44100.pkl',
-        'stimuli':    'stimuli_dataset_features_balanced_44100.pkl',
-        'vocals':     'vocals_dataset_features_balanced_44100.pkl',
+        'strings':    'strings_dataset_features_balanced.pkl',
+        'drum_loops': 'drums_dataset_features_balanced.pkl',
+        'stimuli':    'stimuli_dataset_features_balanced.pkl',
+        'vocals':     'vocals_dataset_features_balanced.pkl',
     }
 
     datasets_dict = {}
@@ -379,10 +379,10 @@ if __name__ == "__main__":
     #K_RANGE  = [4,5,7,8,9,10]
     K_RANGE = [6]
     for k in K_RANGE:
-        run_cluster_analysis(home, "results_44100" , 
+        run_cluster_analysis(home, "results" , 
                      datasets_dict, n_clusters=k, pca_components = pca_components,
                      recluster=True)
-        run_encodec_analysis(home, "results_44100" , 
+        run_encodec_analysis(home, "results" , 
                      datasets_dict, n_clusters=k, pca_components = pca_components,
                      recluster=True)
     
